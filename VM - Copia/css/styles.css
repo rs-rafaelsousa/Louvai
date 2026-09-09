@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    font-weight: 200;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.top-bar {
+    position: relative;
+    background-color: #ffffff;
+    border-bottom: 2px solid rgb(255, 0, 0); /* Borda sólida e limpa */
+    padding: 1px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 45px;
+    width: auto;
+}
+
+.logo2 {
+    height: 110px;
+    width: auto;
+    display: block;
+}
