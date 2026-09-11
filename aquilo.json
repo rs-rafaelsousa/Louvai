@@ -1,0 +1,837 @@
+{
+  "titulo": "Aquilo que fui não sou mais",
+  "autor": "Let. J.J.M / Mús. I.A.M. • Contra Capa",
+  "tom": "Em",
+  "tomExtenso": "Mi menor",
+  "cifra2": [
+    {
+     "linha":[
+      { "intro": "Introdução:"},
+      { "acordeint": "Am D G C F#° B7 Em Am Em"}
+     ]
+    },
+    
+    {
+      "linha": [
+        { "acorde": "Em", "texto": "Aquilo que fui " },
+        { "acorde": "C", "texto": "não sou mais" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Nem sou tudo o que " },
+        { "acorde": "B", "texto": "devo ser;" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Já sou pela " },
+        { "acorde": "Am", "texto": "graça o que sou" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "E ao vê-lo estou " },
+        { "acorde": "C", "texto": "certo que vou" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "B", "texto": "Na Glória de " },
+        { "acorde": "Em", "texto": "Cri" },
+        { "acorde": "E", "texto": "sto viver." }
+      ]
+    },
+    {
+      "linha": [
+        { "intro": "CORO"}
+      ]
+    },
+    
+    {
+      "linha": [
+        { "acorde": "Am", "texto": "Ma" },
+        { "acorde": "D", "texto": "ranata, " },
+        { "acorde": "G", "texto": "Mara" },
+        { "acorde": "C", "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "F#°", "texto": "Em breve o Senhor " },
+        { "acorde": "B7", "texto": "voltar" },
+        { "acorde": "Em", "texto": "á" },
+        { "acorde": "E", "texto": "" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "Am", "texto": "Ma" },
+        { "acorde": "D", "texto": "ranata, " },
+        { "acorde": "G", "texto": "Mara" },
+        { "acorde": "C", "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "F#°", "texto": "Ele mesmo " },
+        { "acorde": "B7", "texto": "virá nos bus" },
+        { "acorde": "Em", "texto": "car" },
+        { "acorde": "Am", "texto": "" },
+        { "acorde": "Em", "texto": "" }
+      ]
+    },
+    {
+      "linha": [
+        { "texto": ""}
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "Em", "texto": "Eu morto pensei" },
+        { "acorde": "C", "texto": "que vivia" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Já vivo e com " },
+        { "acorde": "B", "texto": "Cristo morri" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Para ele, estou " },
+        { "acorde": "Am", "texto": "ressuscitado" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Para o mundo, estou " },
+        { "acorde": "C", "texto": "crucificado" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "B", "texto": "Minha vida em Jesus " },
+        { "acorde": "Em", "texto": "escon" },
+        { "acorde": "E", "texto": "di" }
+      ]
+    },
+  
+   {
+      "linha": [
+        { "intro": "CORO"}
+      ]
+    },
+    
+    {
+      "linha": [
+        { "acorde": "Am", "texto": "Ma" },
+        { "acorde": "D", "texto": "ranata, " },
+        { "acorde": "G", "texto": "Mara" },
+        { "acorde": "C", "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "F#°", "texto": "Em breve o Senhor " },
+        { "acorde": "B7", "texto": "voltar" },
+        { "acorde": "Em", "texto": "á" },
+        { "acorde": "E", "texto": "" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "Am", "texto": "Ma" },
+        { "acorde": "D", "texto": "ranata, " },
+        { "acorde": "G", "texto": "Mara" },
+        { "acorde": "C", "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "F#°", "texto": "Ele mesmo " },
+        { "acorde": "B7", "texto": "virá nos bus" },
+        { "acorde": "Em", "texto": "car" },
+        { "acorde": "Am", "texto": "" },
+        { "acorde": "Em", "texto": "" }
+      ]
+    },
+    
+    {
+      "linha": [
+        { "texto": ""}
+      ]
+    },
+
+    {
+      "linha": [
+        { "acorde": "Em", "texto": "Minh'alma gozando " },
+        { "acorde": "C", "texto": "riquezas" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Tesouros que o mundo " },
+        { "acorde": "B", "texto": "não dá" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Caminha na doce " },
+        { "acorde": "Am", "texto": "esperança" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Da Vida em eterna " },
+        { "acorde": "C", "texto": "bonança" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "B", "texto": "Na glória onde Jesus es" },
+        { "acorde": "Em", "texto": "tá" },
+        { "acorde": "E", "texto": "" }
+      ]
+    },
+    
+     {
+      "linha": [
+        { "intro": "CORO"}
+      ]
+    },
+    
+    {
+      "linha": [
+        { "acorde": "Am", "texto": "Ma" },
+        { "acorde": "D", "texto": "ranata, " },
+        { "acorde": "G", "texto": "Mara" },
+        { "acorde": "C", "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "F#°", "texto": "Em breve o Senhor " },
+        { "acorde": "B7", "texto": "voltar" },
+        { "acorde": "Em", "texto": "á" },
+        { "acorde": "E", "texto": "" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "Am", "texto": "Ma" },
+        { "acorde": "D", "texto": "ranata, " },
+        { "acorde": "G", "texto": "Mara" },
+        { "acorde": "C", "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "F#°", "texto": "Ele mesmo " },
+        { "acorde": "B7", "texto": "virá nos bus" },
+        { "acorde": "Em", "texto": "car" },
+        { "acorde": "Am", "texto": "" },
+        { "acorde": "Em", "texto": "" }
+      ]
+    }
+  ],
+
+"cifra1": [
+    {
+     "linha":[
+      { "intro": "Introdução:"},
+      { "acordeint": "Am D G C B7 Em Am Em"}
+     ]
+    },
+    
+    {
+      "linha": [
+        { "acorde": "Em", "texto": "Aquilo que fui " },
+        { "acorde": "C", "texto": "não sou mais" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Nem sou tudo o que devo" },
+        { "acorde": "B7", "texto": "ser;" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Já sou pela graça o que" },
+        { "acorde": "Am", "texto": "sou" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "E ao vê-lo estou certo que " },
+        { "acorde": "C", "texto": "vou" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Na" },
+        { "acorde": "B7", "texto": "Glória de Cristo vi" },
+        { "acorde": "E", "texto": "ver." }
+        
+      ]
+    },
+    {
+      "linha": [
+        { "intro": "CORO"}
+      ]
+    },
+    
+    {
+      "linha": [
+        { "acorde": "Am", "texto": "Ma" },
+        { "acorde": "D", "texto": "ranata, " },
+        { "acorde": "G", "texto": "Mara" },
+        { "acorde": "C", "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "B7", "texto": "Em breve o Senhor " },
+        { "acorde": "", "texto": "voltar" },
+        { "acorde": "Em", "texto": "á" },
+        { "acorde": "E", "texto": "" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "Am", "texto": "Ma" },
+        { "acorde": "D", "texto": "ranata, " },
+        { "acorde": "G", "texto": "Mara" },
+        { "acorde": "C", "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "B7", "texto": "Ele mesmo " },
+        { "acorde": "", "texto": "virá nos bus" },
+        { "acorde": "Em", "texto": "car" },
+        { "acorde": "Am", "texto": "" },
+        { "acorde": "Em", "texto": "" }
+      ]
+    },
+    {
+      "linha": [
+        { "texto": ""}
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "Em", "texto": "Eu morto pensei" },
+        { "acorde": "C", "texto": "que vivia" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Já vivo e com " },
+        { "acorde": "B", "texto": "Cristo morri" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Para ele, estou " },
+        { "acorde": "Am", "texto": "ressuscitado" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Para o mundo, estou " },
+        { "acorde": "C", "texto": "crucificado" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "B", "texto": "Minha vida em Jesus " },
+        { "acorde": "Em", "texto": "escon" },
+        { "acorde": "E", "texto": "di" }
+      ]
+    },
+  
+   {
+      "linha": [
+        { "intro": "CORO"}
+      ]
+    },
+    
+    {
+      "linha": [
+        { "acorde": "Am", "texto": "Ma" },
+        { "acorde": "D", "texto": "ranata, " },
+        { "acorde": "G", "texto": "Mara" },
+        { "acorde": "C", "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "B7", "texto": "Em breve o Senhor " },
+        { "acorde": "", "texto": "voltar" },
+        { "acorde": "Em", "texto": "á" },
+        { "acorde": "E", "texto": "" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "Am", "texto": "Ma" },
+        { "acorde": "D", "texto": "ranata, " },
+        { "acorde": "G", "texto": "Mara" },
+        { "acorde": "C", "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "B7", "texto": "Ele mesmo " },
+        { "acorde": "", "texto": "virá nos bus" },
+        { "acorde": "Em", "texto": "car" },
+        { "acorde": "Am", "texto": "" },
+        { "acorde": "Em", "texto": "" }
+      ]
+    },
+    
+    {
+      "linha": [
+        { "texto": ""}
+      ]
+    },
+
+    {
+      "linha": [
+        { "acorde": "Em", "texto": "Minh'alma gozando " },
+        { "acorde": "C", "texto": "riquezas" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Tesouros que o mundo " },
+        { "acorde": "B", "texto": "não dá" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Caminha na doce " },
+        { "acorde": "Am", "texto": "esperança" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "", "texto": "Da Vida em eterna " },
+        { "acorde": "C", "texto": "bonança" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "B", "texto": "Na glória onde Jesus es" },
+        { "acorde": "Em", "texto": "tá" },
+        { "acorde": "E", "texto": "" }
+      ]
+    },
+    
+     {
+      "linha": [
+        { "intro": "CORO"}
+      ]
+    },
+    
+    {
+      "linha": [
+        { "acorde": "Am", "texto": "Ma" },
+        { "acorde": "D", "texto": "ranata, " },
+        { "acorde": "G", "texto": "Mara" },
+        { "acorde": "C", "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "B7", "texto": "Em breve o Senhor " },
+        { "acorde": "", "texto": "voltar" },
+        { "acorde": "Em", "texto": "á" },
+        { "acorde": "E", "texto": "" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "Am", "texto": "Ma" },
+        { "acorde": "D", "texto": "ranata, " },
+        { "acorde": "G", "texto": "Mara" },
+        { "acorde": "C", "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        { "acorde": "B7", "texto": "Ele mesmo " },
+        { "acorde": "", "texto": "virá nos bus" },
+        { "acorde": "Em", "texto": "car" },
+        { "acorde": "Am", "texto": "" },
+        { "acorde": "Em", "texto": "" }
+      ]
+    }
+  ],
+
+"letter": [
+    
+    {
+      "linha": [
+        {  "texto": "Aquilo que fui " },
+        {  "texto": "não sou mais" }
+      ]
+    },
+    {
+      "linha": [
+        {"texto": "Nem sou tudo o que " },
+        { "texto": "devo ser;" }
+      ]
+    },
+    {
+      "linha": [
+        {"texto": "Já sou pela " },
+        {"texto": "graça o que sou" }
+      ]
+    },
+    {
+      "linha": [
+        { "texto": "E ao vê-lo estou " },
+        {"texto": "certo que vou" }
+      ]
+    },
+    {
+      "linha": [
+        { "texto": "Na Glória de " },
+        { "texto": "Cri" },
+        { "texto": "sto viver." }
+      ]
+    },
+    {
+      "linha": [
+        { "intro": "CORO"}
+      ]
+    },
+    
+    {
+      "linha": [
+        {  "texto": "Ma" },
+        {  "texto": "ranata, " },
+        {  "texto": "Mara" },
+        {  "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Em breve o Senhor " },
+        {  "texto": "voltar" },
+        { "texto": "á" },
+        {  "texto": "" }
+      ]
+    },
+    {
+      "linha": [
+        { "texto": "Ma" },
+        {  "texto": "ranata, " },
+        {  "texto": "Mara" },
+        {  "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Ele mesmo " },
+        { "texto": "virá nos bus" },
+        {  "texto": "car" },
+        {  "texto": "" },
+        {  "texto": "" }
+      ]
+    },
+    {
+      "linha": [
+        { "texto": ""}
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Eu morto pensei" },
+        {  "texto": "que vivia" }
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Já vivo e com " },
+        {  "texto": "Cristo morri" }
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Para ele, estou " },
+        {  "texto": "ressuscitado" }
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Para o mundo, estou " },
+        {  "texto": "crucificado" }
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Minha vida em Jesus " },
+        {  "texto": "escon" },
+        {  "texto": "di" }
+      ]
+    },
+  
+   {
+      "linha": [
+        { "intro": "CORO"}
+      ]
+    },
+    
+    {
+      "linha": [
+        { "texto": "Ma" },
+        {  "texto": "ranata, " },
+        {  "texto": "Mara" },
+        {  "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Em breve o Senhor " },
+        {  "texto": "voltar" },
+        {  "texto": "á" },
+        {  "texto": "" }
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Ma" },
+        {  "texto": "ranata, " },
+        {  "texto": "Mara" },
+        {  "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Ele mesmo " },
+        {  "texto": "virá nos bus" },
+        {  "texto": "car" },
+        {  "texto": "" },
+        {  "texto": "" }
+      ]
+    },
+    
+    {
+      "linha": [
+        { "texto": ""}
+      ]
+    },
+
+    {
+      "linha": [
+        { "texto": "Minh'alma gozando " },
+        {  "texto": "riquezas" }
+      ]
+    },
+    {
+      "linha": [
+        { "texto": "Tesouros que o mundo " },
+        { "texto": "não dá" }
+      ]
+    },
+    {
+      "linha": [
+        { "texto": "Caminha na doce " },
+        {  "texto": "esperança" }
+      ]
+    },
+    {
+      "linha": [
+        { "texto": "Da Vida em eterna " },
+        {  "texto": "bonança" }
+      ]
+    },
+    {
+      "linha": [
+        { "texto": "Na glória onde Jesus es" },
+        { "texto": "tá" },
+        { "texto": "" }
+      ]
+    },
+    
+     {
+      "linha": [
+        { "intro": "CORO"}
+      ]
+    },
+    
+    {
+      "linha": [
+        {  "texto": "Ma" },
+        {  "texto": "ranata, " },
+        {  "texto": "Mara" },
+        {  "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Em breve o Senhor " },
+        {  "texto": "voltar" },
+        {  "texto": "á" },
+        {  "texto": "" }
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Ma" },
+        {  "texto": "ranata, " },
+        {  "texto": "Mara" },
+        {  "texto": "nata" }
+      ]
+    },
+    {
+      "linha": [
+        {  "texto": "Ele mesmo " },
+        {  "texto": "virá nos bus" },
+        {  "texto": "car" },
+        {  "texto": "" },
+        {  "texto": "" }
+      ]
+    }
+  ],
+  "melodica": [
+    {
+        "linha": [
+            { "intro": "Introdução:" }
+        ]
+    },
+    {
+        "linha": [
+            { "acordeint": "C B A G F# / B A G F# E" }
+        ]
+    },
+    {
+        "linha": [
+            { "acordeint": "G F# C A G F# ( E E D E )" }
+        ]
+    },
+    {
+      "linha": [
+        { "texto":""}
+      ]
+    },
+    {
+        "linha": [
+            { "acordeint": "D E E E E E F# G" }
+        ]
+    },
+    {
+        "linha": [
+            { "texto": "Aquilo que fui " },
+            { "texto": "não sou mais" }
+        ]
+    },
+    {
+        "linha": [
+            { "acordeint": "F# G G G G A G F#" }
+        ]
+    },
+    {
+        "linha": [
+            { "texto": "Nem sou tudo o que " },
+            { "texto": "devo ser;" }
+        ]
+    },
+    {
+        "linha": [
+            { "acordeint": "F# F# F# F# F# G A" }
+        ]
+    },
+    {
+        "linha": [
+            { "texto": "Já sou pela " },
+            { "texto": "graça o que sou" }
+        ]
+    },
+    {
+        "linha": [
+            { "acordeint": "A A A A B C" }
+        ]
+    },
+    {
+        "linha": [
+            { "texto": "E ao vê-lo estou " },
+            { "texto": "certo que vou" }
+        ]
+    },
+    {
+        "linha": [
+            { "acordeint": "C B C B A G F# E" }
+        ]
+    },
+    {
+        "linha": [
+            { "texto": "Na Glória de " },
+            { "texto": "Cri" },
+            { "texto": "sto viver." }
+        ]
+    },
+    {
+        "linha": [
+            { "intro": "CORO" }
+        ]
+    },
+    {
+        "linha": [
+            { "acordeint": "C B A G F# / B A G F# E" }
+        ]
+    },
+    {
+        "linha": [
+            { "texto": "Ma" },
+            { "texto": "ranata, " },
+            { "texto": "Mara" },
+            { "texto": "nata" }
+        ]
+    },
+    {
+        "linha": [
+            { "acordeint": "G F# F# F# F# G A B" }
+        ]
+    },
+    {
+        "linha": [
+            { "texto": "Em breve o Senhor " },
+            { "texto": "voltar" },
+            { "texto": "á" }
+        ]
+    },
+    {
+        "linha": [
+            { "acordeint": "C B A G F# / B A G F# E" }
+        ]
+    },
+    {
+        "linha": [
+            { "texto": "Ma" },
+            { "texto": "ranata, " },
+            { "texto": "Mara" },
+            { "texto": "nata" }
+        ]
+    },
+    {
+        "linha": [
+            { "acordeint": "G F# C B A G F# E ( E E D E )" }
+        ]
+    },
+    {
+        "linha": [
+            { "texto": "Ele mesmo " },
+            { "texto": "virá nos bus" },
+            { "texto": "car" }
+        ]
+    }
+]
+
+  }
+

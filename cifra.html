@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Cifra - Louvai</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <a href="index.html" class="btn-voltar" title="Voltar à página inicial">
+                <svg class="seta-vermelha" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </a>
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
+                <img src="assets/logo-icm.svg" alt="Logo ICM" class="logo-im">
+                <span class="divider">|</span>
+                <img src="assets/Louvai.png" alt="Logo Louvai" class="logo-lawai">
+            </a>
+        </header>
+
+        <!-- Informações do Louvor -->
+        <div class="song-header">
+            <h1 class="song-title" id="titulo-musica">Carregando...</h1>
+            <p class="song-meta" id="meta-musica"></p>
+        </div>
+
+        <!-- Caixa de Tom Atual -->
+        <div class="tom-box">
+            <div class="tom-info">
+                <div class="label">Tom Atual</div>
+                <div class="value" id="tom-atual">- <span id="tom-extenso"></span></div>
+            </div>
+            <div class="tom-controls">
+                <button>-</button>
+                <button>+</button>
+            </div>
+        </div>
+
+        <!-- Abas de Visualização Atualizadas -->
+        <div class="tabs">
+            <button class="tab active" data-aba="cifra1">Cifra Nível 1</button>
+            <button class="tab" data-aba="cifra2">Cifra Nível 2</button>
+            <button class="tab" data-aba="melodica">Cifra Melódica</button>
+            <button class="tab" data-aba="letra">Letra</button>
+        </div>
+
+        <!-- Container da Cifra/Conteúdo -->
+        <div class="cifra-container" id="cifra-container"></div>
+    </div>
+
+    <!-- Script de Carregamento, Abas e Transposição -->
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const arquivoJson = params.get("musica") || "aquilo.json";
+
+        const escalaBemol = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
+        const escalaSustenido = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        
+        let semitonsOffset = 0;
+        let dadosMusicaCache = null;
+        let abaAtiva = "cifra1"; // Aba padrão inicial
+
+        const equivalencias = {
+            "Cb": "B", "B#": "C", "Fb": "E", "E#": "F",
+            "Db": "C#", "Eb": "D#", "Gb": "F#", "Ab": "G#", "Bb": "A#"
+        };
+
+        const nomesExtensos = {
+            "C": "Dó", "C#": "Dó sustenido", "Db": "Ré bemol",
+            "D": "Ré", "D#": "Ré sustenido", "Eb": "Mi bemol",
+            "E": "Mi",
+            "F": "Fá", "F#": "Fá sustenido", "Gb": "Sol bemol",
+            "G": "Sol", "G#": "Sol sustenido", "Ab": "Lá bemol",
+            "A": "Lá", "A#": "Lá sustenido", "Bb": "Si bemol",
+            "B": "Si"
+        };
+
+        function obterTomExtenso(tomTransposto) {
+            if (!tomTransposto) return "";
+            const match = tomTransposto.match(/^([A-G][b#]?)(.*)$/);
+            if (!match) return tomTransposto;
+
+            let notaBase = match[1];
+            let sufixo = match[2];
+
+            let nomeBaseExtenso = nomesExtensos[notaBase] || notaBase;
+            
+            let sufixoExtenso = "";
+            if (sufixo.includes("m")) {
+                sufixoExtenso = " menor";
+            } else if (sufixo.includes("7")) {
+                sufixoExtenso = " com sétima";
+            }
+
+            return nomeBaseExtenso + sufixoExtenso;
+        }
+
+        function transporAcorde(acordeOriginal, semitons) {
+            if (!acordeOriginal) return "";
+            const match = acordeOriginal.match(/^([A-G][b#]?)(.*)$/);
+            if (!match) return acordeOriginal;
+
+            let nota = match[1];
+            const sufixo = match[2];
+
+            if (equivalencias[nota]) nota = equivalencias[nota];
+
+            let index = escalaSustenido.indexOf(nota);
+            if (index === -1) index = escalaBemol.indexOf(nota);
+            if (index === -1) return acordeOriginal;
+
+            let novoIndex = (index + semitons) % 12;
+            if (novoIndex < 0) novoIndex += 12;
+
+            return escalaSustenido[novoIndex] + sufixo;
+        }
+
+        function transporMultiplosAcordes(texto, semitons) {
+            if (!texto) return "";
+            return texto.split(" ").map(token => transporAcorde(token, semitons)).join(" ");
+        }
+
+        function renderizarPagina() {
+            if (!dadosMusicaCache) return;
+
+            document.getElementById("titulo-musica").textContent = dadosMusicaCache.titulo;
+            document.getElementById("meta-musica").textContent = dadosMusicaCache.autor;
+
+            const tomTransposto = transporAcorde(dadosMusicaCache.tom, semitonsOffset);
+            const tomExtensoDinamico = obterTomExtenso(tomTransposto);
+            document.getElementById("tom-atual").innerHTML = `${tomTransposto} <span id="tom-extenso">${tomExtensoDinamico}</span>`;
+
+            const container = document.getElementById("cifra-container");
+            container.innerHTML = "";
+
+            const conteudoDinamico = dadosMusicaCache[abaAtiva] || [];
+
+            conteudoDinamico.forEach(itemLinha => {
+                const divLinha = document.createElement("div");
+                divLinha.className = "cifra-linha";
+                
+                if (abaAtiva === "letra") {
+                    itemLinha.linha.forEach(bloco => {
+                        const divBloco = document.createElement("div");
+                        divBloco.className = "bloco";
+
+                        const spanAcordeint = document.createElement("span");
+                        spanAcordeint.className = "acordeint";
+                        spanAcordeint.textContent = transporMultiplosAcordes(bloco.acordeint, semitonsOffset);
+
+                        const spanIntroducao = document.createElement("span");
+                        spanIntroducao.className = "intro";
+                        spanIntroducao.textContent = bloco.intro || "";
+                        
+                        const spanTexto = document.createElement("span");
+                        spanTexto.className = "texto";
+                        spanTexto.textContent = bloco.texto || "";
+
+                        divBloco.appendChild(spanAcordeint);
+                        divBloco.appendChild(spanTexto);
+                        divBloco.appendChild(spanIntroducao);
+                        divLinha.appendChild(divBloco);
+                    });
+                } else {
+                    itemLinha.linha.forEach(bloco => {
+                        const divBloco = document.createElement("div");
+                        divBloco.className = "bloco";
+                        
+                        const spanAcorde = document.createElement("span");
+                        spanAcorde.className = "acorde";
+                        spanAcorde.textContent = transporAcorde(bloco.acorde, semitonsOffset);
+
+                        const spanAcordeint = document.createElement("span");
+                        spanAcordeint.className = "acordeint";
+                        spanAcordeint.textContent = transporMultiplosAcordes(bloco.acordeint, semitonsOffset);
+
+                        const spanIntroducao = document.createElement("span");
+                        spanIntroducao.className = "intro";
+                        spanIntroducao.textContent = bloco.intro || "";
+                        
+                        const spanTexto = document.createElement("span");
+                        spanTexto.className = "texto";
+                        spanTexto.textContent = bloco.texto || "";
+
+                        divBloco.appendChild(spanAcorde);
+                        divBloco.appendChild(spanAcordeint);
+                        divBloco.appendChild(spanTexto);
+                        divBloco.appendChild(spanIntroducao);
+                        divLinha.appendChild(divBloco);
+                    });
+                }
+                
+                container.appendChild(divLinha);
+            });
+        }
+
+        async function carregarMusica() {
+            try {
+                const resposta = await fetch(arquivoJson);
+                dadosMusicaCache = await resposta.json();
+                renderizarPagina();
+            } catch (erro) {
+                document.getElementById("titulo-musica").textContent = "Erro ao carregar louvor";
+                document.getElementById("meta-musica").textContent = "Verifique se o arquivo JSON está configurado corretamente.";
+                console.error(erro);
+            }
+        }
+
+        // Eventos dos botões de abas
+        const botoesAbas = document.querySelectorAll(".tabs .tab");
+        botoesAbas.forEach(botao => {
+            botao.addEventListener("click", () => {
+                botoesAbas.forEach(b => b.classList.remove("active"));
+                botao.classList.add("active");
+                abaAtiva = botao.getAttribute("data-aba");
+                renderizarPagina();
+            });
+        });
+
+        // Controles de Tom (+ e -)
+        const botoesControle = document.querySelectorAll(".tom-controls button");
+        botoesControle[0].addEventListener("click", () => {
+            semitonsOffset--;
+            renderizarPagina();
+        });
+        botoesControle[1].addEventListener("click", () => {
+            semitonsOffset++;
+            renderizarPagina();
+        });
+
+        carregarMusica();
+    </script>
+</body>
+</html>

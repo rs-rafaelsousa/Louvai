@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louvai</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Importando fontes para maior fidelidade -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Cabeçalho com as marcas -->
+        <header class="header">
+            <img src="assets/logo-icm.svg" alt="Logo ICM" class="logo-im">
+            <span class="divider">|</span>
+            <img src="assets/Louvai.png" alt="Logo Louvai" class="logo-lawai">
+        </header>
+
+        <!-- Seção de Título e Descrição -->
+        <section class="hero">
+            <span class="coletanea-tag">COLETÂNEA</span>
+            <h1>Cantemos juntos, na chave certa</h1>
+            <p>Louvores para adoração. Abra a cifra, veja a letra e ajuste o tom em um gesto.</p>
+        </section>
+
+        <!-- Barra de Pesquisa -->
+        <div class="search-box">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input type="text" id="searchInput" placeholder="Buscar por título, autor ou tom">
+        </div>
+
+        <!-- Filtros de Tons (Pílulas) Dinâmicos -->
+        <div class="filters" id="filtersContainer">
+            <button class="filter-btn active" data-tom="Todas">Todas</button>
+            <button class="filter-btn" data-tom="A">A</button>
+            <button class="filter-btn" data-tom="C">C</button>
+            <button class="filter-btn" data-tom="D">D</button>
+            <button class="filter-btn" data-tom="E">E</button>
+            <button class="filter-btn" data-tom="Em">Em</button>
+            <button class="filter-btn" data-tom="G">G</button>
+        </div>
+
+        <!-- Lista de Músicas (Gerada via JavaScript pelo JSON) -->
+        <div class="song-list" id="songListContainer">
+            <!-- Os cards entram aqui automaticamente -->
+        </div>
+    </div>
+
+    <!-- Barra de Navegação Inferior -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18V5l12-2v13"></path>
+                <circle cx="6" cy="18" r="3"></circle>
+                <circle cx="18" cy="16" r="3"></circle>
+            </svg>
+            <span>Coletânea</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Chat</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>Perfil</span>
+        </a>
+    </nav>
+
+    <!-- Script para alimentar a home com o JSON e ativar busca/filtros -->
+    <script>
+        // Banco de dados em JSON com os seus louvores
+        const catalogoMusicas = [
+            {
+                id: 1,
+                titulo: "Aquilo que fui não sou mais",
+                autor: "Let. J.J.M / Mús. I.A.M. • 2018",
+                tom: "Em",
+                tomBadgeClass: "em",
+                tomExtenso: "Mim",
+                pagina: "cifra-aquilo.html"
+            },
+        ];
+
+        const listContainer = document.getElementById("songListContainer");
+        const searchInput = document.getElementById("searchInput");
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        let tomSelecionado = "Todas";
+
+        // Função para desenhar os cards na tela
+        function renderizarCards(musicasParaExibir) {
+            listContainer.innerHTML = "";
+
+            if (musicasParaExibir.length === 0) {
+                listContainer.innerHTML = `<p style="text-align: center; color: #888; padding: 20px;">Nenhum louvor encontrado.</p>`;
+                return;
+            }
+
+            musicasParaExibir.forEach(musica => {
+                const card = document.createElement("div");
+                card.className = "song-card";
+                // Ao clicar no card, ele redireciona para a página da cifra daquele louvor específico
+                card.onclick = () => {
+                    window.location.href = `cifra.html?musica=aquilo.json`;
+                };
+
+                card.innerHTML = `
+                    <div class="song-badge ${musica.tomBadgeClass}">${musica.tom}</div>
+                    <div class="song-info">
+                        <h2>${musica.titulo}</h2>
+                        <p>${musica.autor} &bull; ${musica.tomExtenso}</p>
+                    </div>
+                    <div class="arrow">&gt;</div>
+                `;
+                listContainer.appendChild(card);
+            });
+        }
+
+        // Sistema de Filtragem e Busca integrados
+        function filtrarMusicas() {
+            const termoBusca = searchInput.value.toLowerCase();
+
+            const filtradas = catalogoMusicas.filter(musica => {
+                const bateTom = (tomSelecionado === "Todas" || musica.tom === tomSelecionado);
+                const bateBusca = musica.titulo.toLowerCase().includes(termoBusca) ||
+                    musica.autor.toLowerCase().includes(termoBusca) ||
+                    musica.tom.toLowerCase().includes(termoBusca);
+                return bateTom && bateBusca;
+            });
+
+            renderizarCards(filtradas);
+        }
+
+        // Evento de clique nas pílulas de tom
+        filterButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                filterButtons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                tomSelecionado = btn.getAttribute("data-tom");
+                filtrarMusicas();
+            });
+        });
+
+        // Evento de digitação na barra de pesquisa
+        searchInput.addEventListener("input", filtrarMusicas);
+
+        // Renderização inicial ao carregar a página
+        renderizarCards(catalogoMusicas);
+    </script>
+</body>
+
+</html>
